@@ -2,8 +2,6 @@
 
 **Cache Nuker** is a premium, high-performance Chrome extension designed for web developers and power users who need to purge browser data instantly and reliably. Built with a stunning **glassmorphism UI**, it offers one-click "nuking" of caches, cookies, and session data with surgical precision.
 
-![Cache Nuker Header](icons/icon128.png)
-
 ![Cache Nuker Screenshot](media/screenshot.png)
 
 ## 🚀 Key Features
@@ -40,3 +38,4 @@
 ---
 
 *Stay fast. Stay clean. Nuke the cache.*
+
