@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Cache Nuker – Universal Cache Cleaner",
+  "version": "1.0.0",
+  "description": "One-click utility to nuke all browser caches, cookies, local storage, service workers, and more.",
+  "permissions": [
+    "browsingData",
+    "storage",
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "128": "icons/icon128.png"
+  }
+}

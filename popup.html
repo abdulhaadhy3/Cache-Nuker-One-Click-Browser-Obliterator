@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cache Nuker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+  <!-- ===== MAIN VIEW ===== -->
+  <div id="mainView">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-brand">
+        <div class="header-icon">☢</div>
+        <div>
+          <h1 class="header-title">Cache Nuker</h1>
+          <p class="header-subtitle">Obliterate every cache. One click.</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Cleaning Scope -->
+    <div class="scope-section">
+      <div class="scope-label">Cleaning Scope</div>
+      <div class="scope-toggle-container">
+        <button id="scopeGlobal" class="scope-btn active" data-scope="global">Global</button>
+        <button id="scopeSite" class="scope-btn" data-scope="site">Current Site</button>
+        <div class="scope-slider"></div>
+      </div>
+      <div id="targetDisplay" class="target-display hidden">
+        <span class="target-label">Target:</span>
+        <span id="targetOrigin" class="target-url">loading...</span>
+      </div>
+    </div>
+
+    <!-- Nuke Button -->
+    <div class="nuke-section">
+      <button id="nukeBtn" class="nuke-btn">
+        <span class="nuke-icon">☢</span>
+        <span class="nuke-text">NUKE ALL CACHES</span>
+        <span class="nuke-sub">Select targets below</span>
+      </button>
+      <div class="nuke-glow"></div>
+    </div>
+
+    <!-- Quick Stats -->
+    <div class="stats-bar">
+      <div class="stat">
+        <span class="stat-value" id="selectedCount">0</span>
+        <span class="stat-label">Selected</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-value" id="totalCategories">0</span>
+        <span class="stat-label">Categories</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <button id="selectAllBtn" class="select-all-btn">Select All</button>
+      </div>
+    </div>
+
+    <!-- Cache Categories -->
+    <div class="categories" id="categories">
+      <!-- Populated by JS -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <span>Cache Nuker v1.0</span>
+      <span class="footer-dot">•</span>
+      <span>Stay fast. Stay clean.</span>
+    </footer>
+  </div>
+
+  <!-- ===== PROGRESS OVERLAY ===== -->
+  <div id="progressOverlay" class="overlay hidden">
+    <div class="overlay-content">
+      <div class="spinner">
+        <div class="spinner-ring"></div>
+        <div class="spinner-icon">☢</div>
+      </div>
+      <h2 class="progress-title">Nuking Caches…</h2>
+      <p class="progress-status" id="progressStatus">Initializing…</p>
+      <div class="progress-bar-container">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== RESULTS OVERLAY ===== -->
+  <div id="resultsOverlay" class="overlay hidden">
+    <div class="overlay-content results-content">
+      <div class="results-icon">✅</div>
+      <h2 class="results-title">Caches Nuked!</h2>
+      <p class="results-subtitle" id="resultsSummary">All selected caches have been obliterated.</p>
+      <div class="results-list" id="resultsList">
+        <!-- Populated by JS -->
+      </div>
+      <button id="doneBtn" class="done-btn">Done</button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>
